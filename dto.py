@@ -6,7 +6,7 @@ from pydantic import BaseModel, Field, PositiveFloat, PositiveInt, model_seriali
 
 CustomDate = Annotated[
     str | date,
-    BeforeValidator(lambda x: datetime.strptime('31.01.2023', '%d.%m.%Y').date())
+    BeforeValidator(lambda x: datetime.strptime(x, '%d.%m.%Y').date())
 ]
 
 
