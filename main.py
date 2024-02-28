@@ -16,4 +16,4 @@ async def validation_exception_handler(request, exc):
 
 @app.post("/calculate-deposit", response_model=PostDepositOutput, status_code=200)
 async def calculate_deposit_method(data: PostDepositInput) -> PostDepositOutput:
-    return await calculate_deposit(data)
+    return calculate_deposit(data)
